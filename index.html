@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Information</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            text-align: justify; /* Rata kanan-kiri */
+            text-indent: 30px;  /* Indentasi kalimat pertama */
+            line-height: 1.6;   
+        }
+        a {
+            color: #007BFF;  /* Warna biru untuk link */
+            text-decoration: none; /* Menghilangkan garis bawah */
+            font-weight: bold; /* Membuat teks tebal */
+        }
+
+        /* Efek saat hover (ketika kursor diarahkan ke link) */
+        a:hover {
+            text-decoration: underline; /* Menambahkan garis bawah saat hover */
+            color: #0056b3;  /* Mengubah warna menjadi biru lebih gelap */
+        }
+        header {
+            background-color: #61a8ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #5363b4;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 100% {
+                background-color: #7a61d3;
+            }
+            50% {
+                background-color: #a753b8;
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #374e79;
+            padding: 10px;
+            border-bottom: 5px solid #5363b4;
+        }
+        nav a {
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #f6b3ff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: #9abbfd;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            max-width: 100%; /* Tetap responsif */
+            height: 150px; /* Tinggi tetap */
+            width: 150px; /* Lebar tetap */
+            border-radius: 10px; /* Sudut membulat */
+            object-fit: cover; /* Memotong gambar untuk memenuhi ukuran */
+}
+        .card h3 {
+            margin: 10px 0;
+            color: #000000;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            color: #4e342e;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>🌟 Informasi Perangkat 🌟</h1>
+    </header>
+
+    <nav>
+        <a href="#input">Peralatan Input</a>
+        <a href="#processing">Peralatan Pemrosesan</a>
+        <a href="#output">Peralatan Output</a>
+    </nav>
+
+    <div class="container">
+        <!-- Peralatan Input -->
+        <section id="input">
+            <h2>Peralatan Input</h2>
+            <div class="card" onclick="toggleDetails('keyboard-details')">
+                <img src="keyboard.jpg" alt="Keyboard">
+                <h3>⌨️ Keyboard</h3>
+                <div class="details" id="keyboard-details">
+                    <p> <a href="https://www.youtube.com/watch?v=igs1Zht36uc" target="_blank">Keyboard</a> adalah perangkat input yang digunakan untuk memasukkan data atau perintah ke dalam komputer, laptop, atau perangkat elektronik lainnya. Keyboard terdiri dari berbagai tombol (key) yang mewakili huruf, angka, simbol, dan fungsi tertentu. Berfungsi sebagai perangkat input untuk memasukkan teks, memberikan perintah, navigasi, dan kontrol sistem pada komputer atau perangkat elektronik, termasuk mengetik huruf, angka, dan simbol, menjalankan pintasan dengan tombol kombinasi, serta mendukung aktivitas seperti bermain game atau mengatur media. Tersedia dalam berbagai bentuk dan ukuran, seperti keyboard fisik yang digunakan dengan komputer desktop dan keyboard virtual yang muncul di layar perangkat sentuh seperti ponsel dan tablet.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('mouse-details')">
+                <img src="mouse.jpg" alt="Mouse">
+                <h3>🖱️ Mouse</h3>
+                <div class="details" id="mouse-details">
+                    <p><a href="https://youtu.be/dlw65R5ZIko?si=YGaYzcp-xAtTT69R" target="_blank">Mouse</a> komputer adalah perangkat keras yang berbentuk kecil dan dapat digerakkan di atas permukaan datar untuk memindahkan kursor di layar komputer. Nama "mouse" diambil dari bentuk fisiknya yang menyerupai tikus kecil, dengan kabel yang menyerupai ekor (pada model wired). Fungsinya adalah mengatur pergerakan kursor secara cepat dan memberikan perintah dengan menekan tombol pada mouse.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('microphone-details')">
+                <img src="microphone.jpg" alt="Microphone"> 
+                <h3>🎤 Microphone</h3>
+                <div class="details" id="microphone-details">
+                    <p><a href="https://youtu.be/EvdtBNF-D50?si=XMcEBWso83ZepbmV" target="_blank">Microphone</a> memiliki fungsi sebagai alat input untuk audio pada laptop dan komputer. Microphone biasanya sudah include dalam fitur standar untuk perangkat laptop, tetapi untuk komputer biasanya Anda harus menambahkan aksesoris microphone tambahan. Kualitas dari audio yang dihasilkan bisa dipengaruhi dari kualitas microphone yang digunakan.</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Peralatan Pemrosesan -->
+        <section id="processing">
+            <h2>Peralatan Pemrosesan</h2>
+            <div class="card" onclick="toggleDetails('processor-details')">
+                <img src="processor.jpg" alt="Processor">
+                <h3>🖥️ Processor</h3>
+                <div class="details" id="processor-details">
+                    <p><a href="https://youtu.be/kn1sMzMce0Y?si=7RBaIdJET50aajcg" target="_blank">Prosesor</a> komputer, atau CPU (Central Processing Unit), adalah komponen utama dalam sistem komputer yang berfungsi untuk mengeksekusi perintah-perintah dari program perangkat lunak dan mengolah data. Prosesor bertanggung jawab untuk menjalankan operasi aritmatika, logika, serta pengendalian aliran data antara perangkat keras lainnya seperti memori dan input/output. Dengan kata lain, prosesor bertindak sebagai "otak" dari komputer, mengelola dan mengarahkan proses pengolahan informasi agar sistem dapat berfungsi dengan baik dan responsif.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('ram-details')">
+                <img src="ram.jpg" alt="RAM">
+                <h3>🔋 RAM</h3>
+                <div class="details" id="ram-details">
+                    <p><a href="https://youtu.be/YRpg-ksoksE?si=MEovmwdxoWT4q1WV" target="_blank">RAM</a> (Random Access Memory) adalah jenis memori sementara yang digunakan oleh komputer untuk menyimpan data dan program yang sedang aktif atau diproses. RAM memungkinkan akses cepat terhadap informasi yang diperlukan oleh prosesor dalam menjalankan tugas-tugasnya, sehingga meningkatkan kinerja dan kecepatan sistem. Ketika komputer dimatikan, data dalam RAM akan hilang, karena RAM hanya menyimpan informasi selama perangkat dalam keadaan menyala. Semakin besar kapasitas RAM, semakin banyak aplikasi dan data yang dapat diproses secara bersamaan tanpa mengurangi performa.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('cpu-details')">
+                <img src="vgacard.jpg" alt="cpu">
+                <h3>🔋 VGA Card</h3>
+                <div class="details" id="cpu-details">
+                    <p><a href="https://www.youtube.com/watch?v=vL4l6vI2CTw" target="_blank">VGA card</a>, atau kartu grafis, adalah perangkat keras komputer yang berfungsi untuk mengolah dan menghasilkan output gambar atau video yang ditampilkan pada monitor. VGA (Video Graphics Array) adalah salah satu standar awal untuk tampilan grafis, meskipun istilah ini kini sering digunakan secara umum untuk merujuk pada kartu grafis. Kartu grafis memiliki unit pemrosesan grafis (GPU) yang dirancang khusus untuk menangani tugas-tugas pemrosesan grafis, seperti rendering gambar, video, dan animasi. Dengan kartu grafis yang lebih kuat, komputer dapat menjalankan aplikasi grafis intensif, seperti permainan video, desain grafis, pengeditan video, dan simulasi 3D, dengan lebih lancar dan berkualitas tinggi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peralatan Output -->
+        <section id="output">
+            <h2>Peralatan Output</h2>
+            <div class="card" onclick="toggleDetails('monitor-details')">
+                <img src="monitor.jpg" alt="Monitor">
+                <h3>🖥️ Monitor</h3>
+                <div class="details" id="monitor-details">
+                    <p><a href="https://youtu.be/eXP74inxOXA?si=UV-wX5cn4YmDxcDb" target="_blank">Monitor</a> adalah perangkat output yang digunakan untuk menampilkan hasil visual dari data atau perintah yang diproses oleh komputer. Monitor berfungsi untuk menampilkan teks, gambar, video, atau grafik dalam format visual yang dapat dilihat oleh pengguna. Perangkat ini merupakan salah satu komponen utama dalam sistem komputer yang memungkinkan interaksi dengan perangkat lunak melalui tampilan grafis atau antarmuka pengguna. Monitor tersedia dalam berbagai ukuran dan resolusi, dan digunakan dalam berbagai aplikasi seperti pekerjaan kantor, hiburan, desain grafis, dan gaming.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('printer-details')">
+                <img src="printer.jpg" alt="Printer">
+                <h3>🖨️ Printer</h3>
+                <div class="details" id="printer-details">
+                    <p><a href="https://youtu.be/WZBfdLSaKi8?si=qIuZGG2DMRZthF1N" target="_blank">Printer</a> adalah perangkat output yang digunakan untuk mencetak dokumen, gambar, atau grafik dari komputer ke media fisik seperti kertas. Printer berfungsi untuk menghasilkan salinan fisik dari data digital yang telah diproses, dan tersedia dalam berbagai jenis, seperti printer inkjet, laser, atau dot matrix. Printer banyak digunakan di perkantoran, rumah tangga, dan lingkungan pendidikan untuk mencetak berbagai jenis dokumen, mulai dari teks hingga gambar dengan kualitas tinggi. Dengan teknologi yang terus berkembang, printer kini juga dapat mendukung pencetakan nirkabel dan fitur canggih lainnya.</p>
+                </div>
+            </div>
+            <div class="card" onclick="toggleDetails('speaker-details')">
+                <img src="speaker.jpg" alt="Speaker">
+                <h3>🖨️ Speaker</h3>
+                <div class="details" id="speaker-details">
+                    <p><a href="https://youtu.be/74ZpJvFM2ic?si=Q_NfDD7lGD9SmbCV" target="_blank">Speaker</a> adalah perangkat output yang digunakan untuk menghasilkan suara atau audio dari komputer atau perangkat elektronik lainnya. Speaker mengubah sinyal listrik yang diterima menjadi gelombang suara yang dapat didengar oleh manusia, memungkinkan pemutaran musik, efek suara, percakapan dalam video, dan berbagai jenis audio lainnya. Biasanya digunakan pada perangkat komputer, televisi, ponsel, dan sistem audio lainnya. Speaker tersedia dalam berbagai ukuran dan kualitas suara, mulai dari speaker kecil yang terintegrasi dalam perangkat portabel hingga speaker besar dengan kualitas suara yang lebih baik untuk penggunaan di rumah atau panggung.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
